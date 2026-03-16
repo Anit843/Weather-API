@@ -1,80 +1,80 @@
 *{
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
-     
 }
 
-
 .container-box{
-    width:100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     margin: auto;
     position: relative;
     background-color: #6B92F2;
-
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
 }
 
 .background-video{
     position: absolute;
-    right: 0;
-    bottom: 0;
+    top: 0;
+    left: 0;
     width: 100%;
-
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
 }
 
-
-
-
-
 .weather-box{
-    width:450px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    position: absolute;
+    width: 100%;
+    max-width: 450px;
+    padding: 20px 18px;
+    position: relative;
     border: 1px solid #9ac6f889;
-    top: 80px;
-    left:510px;
     border-radius: 10px;
-    background-color:rgba(76, 79, 79, 0.873);
+    background-color: rgba(76, 79, 79, 0.873);
     box-shadow: 4px 4px 15px 0px rgba(62, 62, 62, 0.346);
-    backdrop-filter: blur(14px); 
+    backdrop-filter: blur(14px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap:2px;
-    opacity:.9;
+    gap: 2px;
+    opacity: .9;
+    z-index: 1;
 }
 
 .error{
-    position: absolute;
-    top:85px;
-    left: 27px;
-    text-align:left;
+    width: 100%;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 2px;
     display: none;
 }
 
 .error p{
-    font-size:12px;
+    font-size: 12px;
     color: #f70202d2;
 }
 
 .input-box{
-    width: 415px;
-    height: 80px;
-    padding-left: 10px;
-    padding-top: 18px;
+    width: 100%;
+    min-height: 80px;
+    padding: 10px 10px 0 10px;
     display: flex;
     gap: 18px;
+    align-items: center;
+    justify-content: center;
 }
 
 .input-box input{
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 40px;
     font-size: 18px;
     color: #D5DFE8;
-    flex-direction: column;
     outline: none;
     border: none;
     border-bottom: 2px solid #8CC3F7;
@@ -83,7 +83,8 @@
 }
 
 .input-box button{
-    width: 75px;
+    width: 90px;
+    min-width: 75px;
     height: 40px;
     border-radius: 5px;
     border: none;
@@ -91,7 +92,6 @@
     font-size: 16px;
     font-weight: 500;
     cursor: pointer;
-
 }
 
 input::placeholder{
@@ -101,19 +101,19 @@ input::placeholder{
 }
 
 .city-name-box{
-    width:250px;
-    height: 100px;
+    width: 100%;
+    max-width: 250px;
+    min-height: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 22px;
     text-align: center;
-
 }
 
 .city-name-box h4{
-    width: 250px;
-    height: 50px;
+    width: 100%;
+    min-height: 50px;
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
@@ -121,45 +121,46 @@ input::placeholder{
     display: flex;
     align-items: center;
     justify-content: center;
-    letter-spacing: 8px;
+    letter-spacing: 6px;
+    word-break: break-word;
 }
 
 .cloud-box{
-    width:200px;
-    height: 65px;
+    width: 100%;
+    max-width: 200px;
+    min-height: 65px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
 .cloud-box p{
-    width: 200px;
-    height: 30px;
+    width: 100%;
+    min-height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #D5DFE8;
     font-size: 18px;
     font-weight: 500;
-    letter-spacing: 3px;
-
+    letter-spacing: 2px;
+    text-align: center;
 }
 
 .icon-img-box{
     width: 150px;
     height: 150px;
-    /* border: 1px solid black; */
-    
 }
 
 .icon-img-box img{
     width: 100%;
     height: 100%;
+    object-fit: contain;
 }
 
 .degree-box{
     width: 200px;
-    height: 60px;
+    min-height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -172,23 +173,26 @@ input::placeholder{
 }
 
 .temperature-box{
-    width: 200px;
-    height: 70px;
+    width: 100%;
+    max-width: 220px;
+    min-height: 70px;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .min-box{
-    width: 100px;
-    height: 60px;
+    width: 50%;
+    min-height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
+
 .min-box h5{
     font-size: 18px;
     color: #FEFEFF;
-
 }
 
 .min-box p{
@@ -198,8 +202,8 @@ input::placeholder{
 }
 
 .max-box{
-    width: 100px;
-    height: 60px;
+    width: 50%;
+    min-height: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -210,7 +214,6 @@ input::placeholder{
 .max-box h5{
     font-size: 18px;
     color: #FEFEFF;
-
 }
 
 .max-box p{
@@ -220,12 +223,163 @@ input::placeholder{
 }
 
 .hide-box{
-    display:none; 
+    display: none;
+    width: 100%;
 }
+
 .hide-box-2{
     display: flex;
     flex-direction: column;
     gap: 20px;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 768px){
+    .container-box{
+        padding: 16px;
+    }
+
+    .weather-box{
+        max-width: 420px;
+        padding: 18px 16px;
+    }
+
+    .input-box{
+        gap: 12px;
+    }
+
+    .input-box input{
+        font-size: 16px;
+    }
+
+    .input-box button{
+        width: 85px;
+        font-size: 15px;
+    }
+
+    .city-name-box h4{
+        font-size: 22px;
+        letter-spacing: 4px;
+    }
+
+    .cloud-box p{
+        font-size: 17px;
+        letter-spacing: 1.5px;
+    }
+
+    .degree-box h1{
+        font-size: 54px;
+    }
+
+    .icon-img-box{
+        width: 130px;
+        height: 130px;
+    }
+}
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 480px){
+    .container-box{
+        padding: 14px;
+    }
+
+    .weather-box{
+        max-width: 100%;
+        padding: 16px 12px;
+        border-radius: 12px;
+    }
+
+    .input-box{
+        flex-direction: column;
+        height: auto;
+        gap: 14px;
+        padding: 8px 6px 0 6px;
+    }
+
+    .input-box input{
+        max-width: 100%;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .input-box button{
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .error{
+        padding-left: 6px;
+    }
+
+    .city-name-box{
+        gap: 14px;
+    }
+
+    .city-name-box h4{
+        font-size: 20px;
+        letter-spacing: 3px;
+        line-height: 26px;
+    }
+
+    .cloud-box p{
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .icon-img-box{
+        width: 110px;
+        height: 110px;
+    }
+
+    .degree-box{
+        width: 100%;
+    }
+
+    .degree-box h1{
+        font-size: 46px;
+    }
+
+    .temperature-box{
+        max-width: 100%;
+    }
+
+    .min-box h5,
+    .max-box h5{
+        font-size: 16px;
+    }
+
+    .min-box p,
+    .max-box p{
+        font-size: 14px;
+    }
+}
+
+/* =========================
+   Small Mobile
+========================= */
+@media (max-width: 320px){
+    .weather-box{
+        padding: 14px 10px;
+    }
+
+    .city-name-box h4{
+        font-size: 18px;
+        letter-spacing: 2px;
+    }
+
+    .degree-box h1{
+        font-size: 40px;
+    }
+
+    .icon-img-box{
+        width: 95px;
+        height: 95px;
+    }
 }
